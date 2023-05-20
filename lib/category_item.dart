@@ -8,17 +8,18 @@ class CategoryItem extends StatelessWidget {
 
   CategoryItem(this.id, this.title, this.color);
 
-  static const routeName='/Category-meals';
-
-  void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(
-      CategoryMealsScreen.routeName,
-      arguments: {
-        'id': id,
-        'title': title,
-      },
+  void selectCategory(BuildContext context) {
+    Map data = {
+      'id': id,
+      'title': title,
+    };
+    Navigator.pushNamed(
+      context,
+      '/category-meals',
+      arguments: data,
     );
   }
+
   // const CategoryItem({Key key}) : super(key: key);
 
   @override

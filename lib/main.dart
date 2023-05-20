@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
-        canvasColor: const Color.fromARGB(255, 254, 229, 1),
+        //  canvasColor: const Color.fromARGB(255, 254, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText1: const TextStyle(
@@ -25,12 +25,12 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      // home: CategoriesScreen(),
+      //home: CategoriesScreen(),
       initialRoute: '/', // default is '/'
       routes: {
         '/': (ctx) => CategoriesScreen(),
-        '/Category-meals': (ctx) => CategoryMealsScreen(),
-        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        '/category-meals': (ctx) => CategoryMealsScreen(),
+        //   CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
       },
     );
   }
